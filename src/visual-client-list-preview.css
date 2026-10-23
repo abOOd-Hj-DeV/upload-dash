@@ -1,0 +1,446 @@
+/* Saved Figma clients frames: 1:6934 (1440), 1:8105 (740), 1:8698 (370).
+   Every rule is isolated from the live client list by the development root. */
+.demo-client-list {
+  --demo-client-list-card-gap: 20px;
+}
+.demo-client-list[data-density='compact'] {
+  --demo-client-list-card-gap: 16px;
+}
+.demo-client-list[data-density='spacious'] {
+  --demo-client-list-card-gap: 20px;
+}
+.demo-client-list > .workspace {
+  min-height: 100svh;
+}
+.demo-client-list .secondary-topbar {
+  height: 52px;
+  padding: 16px 16px 0;
+}
+.demo-client-list .demo-client-list-add-row {
+  display: none;
+}
+.demo-client-list .demo-client-list-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(155deg, #135e66 5.59%, #1d919e 82.06%);
+  box-shadow: inset 0 -3px 3px #ffffff40, inset 0 3px 10px #ffffff4d;
+  color: white;
+  font: 600 14px/18px 'IBM Plex Sans Arabic', sans-serif;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.demo-client-list .demo-client-list-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+.demo-client-list .demo-client-list-filters {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+  gap: 20px;
+  padding: 4px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  background: white;
+}
+.demo-client-list .demo-client-list-filters button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #6a7282;
+  font:
+    400 14px/18px 'IBM Plex Sans Arabic',
+    sans-serif;
+  white-space: nowrap;
+}
+.demo-client-list .demo-client-list-filters button:nth-child(1) {
+  width: 62px;
+}
+.demo-client-list .demo-client-list-filters button:nth-child(2) {
+  width: 84px;
+}
+.demo-client-list .demo-client-list-filters button:nth-child(3) {
+  width: 97px;
+}
+.demo-client-list .demo-client-list-filters button[aria-pressed='true'] {
+  color: white;
+  background: #1d8590;
+  box-shadow:
+    inset 0 -3px 3px #ffffff40,
+    inset 0 3px 10px #ffffff4d;
+}
+.demo-client-list .demo-client-list-more-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  padding: 12px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  background: white;
+}
+.demo-client-list .demo-client-list-more-filters .design-icon {
+  width: 16px;
+  height: 16px;
+}
+.demo-client-list .demo-client-list-filter-anchor { position: relative; flex-shrink: 0; }
+.demo-client-list .demo-client-list-compliance { position: absolute; z-index: 5; top: calc(100% + 2px); left: -10px; width: 224px; padding: 8px; background: #fff; border-radius: 12px; box-shadow: 0 4px 24px #00000014; }
+.demo-client-list .demo-client-list-compliance h2 { height: 24px; padding: 4px 8px; color: #7c8085; font-size: 12px; line-height: 16px; font-weight: 400; margin: 0; }
+.demo-client-list .demo-client-list-compliance button { display: block; width: 100%; height: 40px; padding: 10px 8px; color: #2f2f2f; font: inherit; font-size: 14px; line-height: 20px; text-align: left; border-radius: 6px; }
+.demo-client-list .demo-client-list-compliance button:not(:disabled):hover,
+.demo-client-list .demo-client-list-compliance button[aria-pressed='true'] { background: #f5f5f6; box-shadow: inset 0 0 0 1px #ebebeb; }
+.demo-client-list .demo-client-list-compliance button:disabled { opacity: 1; cursor: not-allowed; }
+.demo-client-list .demo-client-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 0 16px 16px;
+}
+.demo-client-list .demo-client-list-card {
+  display: flex;
+  flex: 0 0 368px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--demo-client-list-card-gap);
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+  background: white;
+  text-align: left;
+  --demo-client-list-accent: #1d919e;
+  --demo-client-list-status-bg: #e4f1f1;
+  --demo-client-list-status-text: #1b7a7a;
+}
+.demo-client-list .demo-client-list-wide-card {
+  flex-basis: 369px;
+}
+.demo-client-list .demo-client-list-amber {
+  --demo-client-list-accent: #c97b2e;
+  --demo-client-list-status-bg: #fbf0e2;
+  --demo-client-list-status-text: #9a5d1e;
+}
+.demo-client-list .demo-client-list-red {
+  --demo-client-list-accent: #b24545;
+  --demo-client-list-status-bg: #fbeaea;
+  --demo-client-list-status-text: #973636;
+}
+.demo-client-list .demo-client-list-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 42px;
+}
+.demo-client-list .demo-client-list-identity {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  gap: 12px;
+  width: 170px;
+}
+.demo-client-list .demo-client-list-portrait {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 42px;
+  overflow: hidden;
+  border: 2px solid #ebebeb;
+  border-radius: 12px;
+  background: white;
+}
+.demo-client-list .demo-client-list-portrait img {
+  position: absolute;
+  max-width: none;
+  width: 111.94%;
+  height: 114.55%;
+  left: -6.94%;
+  top: -6.89%;
+}
+.demo-client-list .demo-client-list-portrait-jamal img,
+.demo-client-list .demo-client-list-portrait-yaser img {
+  width: 390.26%;
+  height: 392.38%;
+  left: -231.75%;
+  top: -230.63%;
+}
+.demo-client-list .demo-client-list-portrait-yaser img {
+  left: -53.19%;
+  top: -234.35%;
+}
+.demo-client-list .demo-client-list-portrait-maya img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+.demo-client-list .demo-client-list-person {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.demo-client-list .demo-client-list-name {
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.54px;
+}
+.demo-client-list .demo-client-list-detail {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.36px;
+}
+.demo-client-list .demo-client-list-status {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--demo-client-list-status-bg);
+  color: var(--demo-client-list-status-text);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  white-space: nowrap;
+  font-feature-settings:
+    'cv09' 1,
+    'ss11' 1,
+    'calt' 0,
+    'liga' 0;
+}
+.demo-client-list .demo-client-list-activity {
+  display: flex;
+  flex-direction: column;
+}
+.demo-client-list .demo-client-list-activity-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.36px;
+}
+.demo-client-list .demo-client-list-percent {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+.demo-client-list .demo-client-list-track {
+  display: block;
+  height: 6px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+.demo-client-list .demo-client-list-track > span {
+  display: block;
+  width: var(--demo-client-list-strip-width);
+  max-width: 100%;
+  height: 6px;
+  border-radius: inherit;
+  background: var(--demo-client-list-accent);
+}
+.demo-client-list .demo-client-list-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+  padding-top: 14px;
+  border-top: 0.8px solid #f1f5f9;
+}
+.demo-client-list .demo-client-list-pill {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #2f2f2f;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.demo-client-list .demo-client-list-pill > .design-icon {
+  width: 20px;
+  height: 20px;
+}
+.demo-client-list .demo-client-list-pill > span:not(.demo-client-list-change) {
+  width: 67px;
+}
+.demo-client-list .demo-client-list-muted-sessions {
+  color: #64748b;
+}
+.demo-client-list .demo-client-list-change {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+  width: 99px;
+  height: 16px;
+  padding-left: 4px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 16px;
+}
+.demo-client-list .demo-client-list-change .design-icon {
+  width: 12px;
+  height: 12px;
+}
+.demo-client-list .demo-client-list-system-change {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+}
+.demo-client-list .demo-client-list-next-session > span {
+  width: auto !important;
+}
+.demo-client-list .demo-client-list-muted-sessions + .demo-client-list-next-session {
+  color: #1e293b;
+}
+.demo-client-list .demo-client-list-empty {
+  width: 100%;
+  padding: 16px;
+  color: #64748b;
+}
+/* 1:7223 / 1:8399 / 1:9140: dim the client preview, never the live API shell.
+   Workspace owns the shared wifi-slash SVG and phone banner inset. */
+.demo-client-list .secondary-offline :is(.sidebar, .secondary-topbar, .demo-client-list-toolbar, .demo-client-list-grid, .demo-client-list-add-row) {
+  opacity: .5;
+}
+.demo-client-list .secondary-offline-banner {
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 11px 15px;
+  min-height: 42px;
+  border: 1px solid #ffb900;
+  border-radius: 8px;
+  background: #fff4cc;
+  color: #fa7800;
+  font-size: 14px;
+  line-height: 18px;
+}
+/* 1:7517 expands the same three columns when the desktop rail is collapsed. */
+@media (min-width: 1101px) {
+  .demo-client-list .secondary-workspace.is-collapsed .demo-client-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+  }
+  /* 1:6934 shows three 368px columns at 1440; other laptop widths reflow instead of stranding cards. */
+  .demo-client-list .secondary-workspace:not(.is-collapsed) .demo-client-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    align-items: stretch;
+  }
+  .demo-client-list[data-compliance-open='true'],
+  .demo-client-list .secondary-workspace.is-collapsed {
+    --demo-client-list-card-gap: 16px;
+  }
+  /* 1:6934/1:7517 keep the date beneath the session count even when both pills fit. */
+  .demo-client-list .secondary-workspace:not(.is-collapsed) .demo-client-list-card-footer,
+  .demo-client-list .secondary-workspace.is-collapsed .demo-client-list-card-footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 1100px) {
+  .demo-client-list .demo-client-list-card,
+  .demo-client-list .demo-client-list-wide-card {
+    flex: 1 0 400px;
+    min-width: min(400px, 100%);
+  }
+  .demo-client-list .demo-client-list-change {
+    width: auto;
+  }
+  .demo-client-list .demo-client-list-spread-footer {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .demo-client-list .secondary-workspace.is-expanded .demo-client-list-add-row {
+    display: block;
+    padding: 16px 16px 0;
+  }
+  .demo-client-list {
+    --demo-client-list-card-gap: 16px;
+  }
+  .demo-client-list .demo-client-list-filters {
+    flex: 1;
+    min-width: 0;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .demo-client-list .demo-client-list-filters button {
+    padding-inline: 8px;
+  }
+  .demo-client-list .demo-client-list-compliance {
+    left: auto;
+    right: 0;
+  }
+  .demo-client-list .secondary-heading h1 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.27px;
+  }
+  .demo-client-list .secondary-topbar {
+    padding-bottom: 0;
+  }
+  .demo-client-list .demo-client-list-card,
+  .demo-client-list .demo-client-list-wide-card {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 359px) {
+  .demo-client-list .demo-client-list-card-header {
+    height: auto;
+    min-height: 42px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .demo-client-list .demo-client-list-identity {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 150px;
+  }
+  .demo-client-list .demo-client-list-person {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .demo-client-list .demo-client-list-status {
+    max-width: 100%;
+    white-space: normal;
+  }
+  .demo-client-list .demo-client-list-pill {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  .demo-client-list .demo-client-list-change {
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+}

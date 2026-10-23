@@ -1,0 +1,71 @@
+/* Round 5 — dialogs-remove unit.
+   r5-113..115: "Delete Template?" confirmation (used by the homework library).
+   r5-116..118: 'Button - حذف' — the holiday-row delete control in Profile settings. */
+
+.r5-delete-template-modal {
+  width: min(360px, calc(100vw - 32px));
+  padding: 16px;
+}
+.r5-delete-template-modal .modal-heading {
+  margin-bottom: 12px;
+}
+.r5-delete-template-modal .modal-heading h2 {
+  color: #16161a;
+  font:
+    700 21px/1.3 'DM Sans',
+    'Inter',
+    sans-serif;
+  letter-spacing: -0.3px;
+}
+.r5-delete-template-modal .modal-heading .icon-button {
+  font-size: 16px;
+}
+.r5-delete-template-copy {
+  color: #5a6370;
+  font:
+    400 14px/1.6 'Inter',
+    sans-serif;
+  margin: 0;
+}
+.r5-delete-template-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+.r5-delete-template-actions button {
+  height: 40px;
+  border: 0;
+  border-radius: 14px;
+  font:
+    600 14px/1 'Inter',
+    sans-serif;
+  cursor: pointer;
+}
+.r5-delete-template-cancel {
+  flex: 0.85;
+  background: #eef1f4;
+  color: #4a5565;
+}
+.r5-delete-template-confirm {
+  flex: 1.6;
+  background: linear-gradient(180deg, #a83232 0%, #861b1b 55%, #a02c2c 100%);
+  color: #fff;
+  box-shadow: 0 6px 16px #8c1f1f40;
+}
+.r5-delete-template-actions button:focus-visible {
+  outline: 2px solid #1d919e;
+  outline-offset: 2px;
+}
+@media (max-width: 480px) {
+  .r5-delete-template-modal {
+    width: calc(100vw - 32px);
+  }
+}
+
+/* 'Button - حذف': a bare muted cross on the vacation row tint — the boxed look
+   and hit area are inherited from .holidays-modal .holiday-remove; this only
+   keeps the glyph weight and placement aligned with the new mark. */
+.holidays-modal .holiday-list .holiday-remove {
+  align-self: center;
+  color: #99a1af;
+}

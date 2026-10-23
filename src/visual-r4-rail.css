@@ -1,0 +1,288 @@
+/* R4 collapsed rail (Figma 1:29593, 1:17721, 1:21695, 1:29854, 1:3014): 40px logo/toggle, 44px chips at 52px pitch, diamond reminder + avatar. */
+@media (min-width: 1101px) {
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar {
+    width: 80px;
+    padding-bottom: 8px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-header {
+    position: relative;
+    height: 104px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 16px 0 0;
+    border: 0;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-header::after {
+    content: '';
+    position: absolute;
+    top: 111px;
+    left: 24px;
+    width: 32px;
+    height: 2px;
+    background: #fafafa;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-header .brand {
+    width: 40px;
+    height: 40px;
+    gap: 0;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-header .brand-symbol {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-header .brand-symbol img {
+    width: 34.48px;
+    height: 34.48px;
+    left: 2.75px;
+    top: 1.48px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px 0;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .nav-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .nav-item > :is(.icon, .design-icon) {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .nav-badge {
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    left: auto;
+    min-width: 14px;
+    height: 14px;
+    padding: 0 3px;
+    border-radius: 7px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding: 0 16px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .compact-reminder {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    width: 48px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: #f2f3f4;
+    align-items: center;
+    justify-content: center;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .compact-reminder > img {
+    content: url('/assets/part2-10-imgMaterialSymbolsLightEmergencyHome.svg');
+    width: 24px;
+    height: 24px;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .compact-reminder > i,
+  #root .workspace.is-collapsed:not(.is-expanded) .compact-reminder:not(:has(> i))::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff6b35;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .profile-card {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 2px;
+    border: 2px solid #1d919e;
+    border-radius: 16px;
+    background: #fff;
+    justify-content: center;
+  }
+  #root .workspace.is-collapsed:not(.is-expanded) .profile-card > img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  #root .workspace:not(.is-expanded) .sidebar {
+    width: 80px;
+    padding-bottom: 8px;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-header {
+    position: relative;
+    height: 104px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 16px 0 0;
+    border: 0;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-header::after {
+    content: '';
+    position: absolute;
+    top: 111px;
+    left: 24px;
+    width: 32px;
+    height: 2px;
+    background: #fafafa;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-header .brand {
+    width: 40px;
+    height: 40px;
+    gap: 0;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-header .brand-symbol {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-header .brand-symbol img {
+    width: 34.48px;
+    height: 34.48px;
+    left: 2.75px;
+    top: 1.48px;
+  }
+  #root .workspace:not(.is-expanded) .collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  #root .workspace:not(.is-expanded) .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 18px 0;
+  }
+  #root .workspace:not(.is-expanded) .nav-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .workspace:not(.is-expanded) .nav-item > :is(.icon, .design-icon) {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+  #root .workspace:not(.is-expanded) .nav-badge {
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    left: auto;
+    min-width: 14px;
+    height: 14px;
+    padding: 0 3px;
+    border-radius: 7px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  #root .workspace:not(.is-expanded) .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding: 0 16px;
+  }
+  #root .workspace:not(.is-expanded) .compact-reminder {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    width: 48px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: #f2f3f4;
+    align-items: center;
+    justify-content: center;
+  }
+  #root .workspace:not(.is-expanded) .compact-reminder > img {
+    content: url('/assets/part2-10-imgMaterialSymbolsLightEmergencyHome.svg');
+    width: 24px;
+    height: 24px;
+  }
+  #root .workspace:not(.is-expanded) .compact-reminder > i,
+  #root .workspace:not(.is-expanded) .compact-reminder:not(:has(> i))::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff6b35;
+  }
+  #root .workspace:not(.is-expanded) .profile-card {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 2px;
+    border: 2px solid #1d919e;
+    border-radius: 16px;
+    background: #fff;
+    justify-content: center;
+  }
+  #root .workspace:not(.is-expanded) .profile-card > img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+}

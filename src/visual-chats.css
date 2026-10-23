@@ -1,0 +1,308 @@
+/* Original chat contexts: part2 2:308, 2:1056, 2:1484, 2:727.
+   Imported by Chats.tsx; intentionally does not override shared shell navigation. */
+.chat-layout .chat-search {
+  background: #f7f7f7;
+  border-color: #ebebeb;
+  margin: 14px 14px 18px;
+  padding: 6px 12px 6px 10px;
+}
+.chat-layout .list-promise {
+  margin: 0 14px 8px;
+}
+/* 1:12530: offline without selection goes straight from search to rows. */
+.demo-chat-layout.is-offline.no-conversation .chat-search {
+  margin-bottom: 10px;
+}
+@media (min-width: 601px) {
+  .chat-workspace.demo-workspace.secondary-offline .secondary-offline-banner {
+    margin-bottom: 32px;
+  }
+  .demo-chat-layout.is-offline.no-conversation .empty-conversation {
+    padding-block-start: 76px;
+  }
+}
+@media (min-width: 1101px) {
+  .demo-chat-layout.is-offline .message-history {
+    padding-top: 24px;
+  }
+}
+.demo-chat-layout .reply-reminder {
+  flex-shrink: 0;
+}
+.chat-layout .conversation strong {
+  font: 700 13.5px / normal 'IBM Plex Sans', sans-serif;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chat-layout .conversation time {
+  font: 400 11px / normal 'IBM Plex Sans', sans-serif;
+}
+.chat-layout .conversation small {
+  font: 400 12px / normal 'IBM Plex Sans', sans-serif;
+}
+.chat-layout .conversation i {
+  width: auto;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 999px;
+  font: 700 10.5px / normal 'IBM Plex Sans', sans-serif;
+}
+.chat-layout .chat-thread-header strong {
+  font: 700 14.5px / normal 'IBM Plex Sans', sans-serif;
+  display: block;
+}
+.chat-layout .chat-thread-header > div {
+  min-width: 0;
+  flex: 1;
+}
+.chat-layout .chat-thread-header p {
+  font: 400 12px / normal 'IBM Plex Sans', sans-serif;
+}
+.chat-layout .reply-reminder {
+  background: #fdf3da;
+  color: #8a6413;
+}
+.chat-layout .message-group .message-date {
+  margin-bottom: 8px;
+}
+.chat-layout .message-composer textarea {
+  min-width: 0;
+  flex: 1;
+  height: 41.2px;
+  resize: none;
+  background: #f4f4f3;
+  border: 0.8px solid #eaeaeb;
+  border-radius: 12px;
+  padding: 11px 14px;
+  font: 400 13.5px/17.55px 'IBM Plex Sans', sans-serif;
+}
+.chat-layout .message-composer textarea::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  /* 1:12906: the full demo SLA belongs in the offline tablet thread. */
+  .demo-chat-layout.is-offline .list-promise {
+    display: none;
+  }
+  .demo-chat-layout.is-offline .thread-promise {
+    display: flex;
+  }
+  .demo-chat-layout.is-offline .chat-search {
+    margin-bottom: 10px;
+  }
+  .chat-layout .message-composer textarea {
+    padding-block: 2px;
+  }
+  .chat-layout .message-composer > button {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+}
+.chat-layout .empty-conversation > div {
+  width: 242.7px;
+  max-width: 100%;
+  padding: 0;
+}
+.chat-layout .empty-conversation .design-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Honest API-only adaptations: no dedicated Figma frames for these controls.
+   Reuse the existing soft-button surface, borders and chat typography. */
+.live-chat-layout .new-conversation {
+  align-self: flex-start;
+  margin: 0 14px 10px;
+}
+.live-chat-layout :is(.chat-list, .chat-thread) > :is([role='status'], [role='alert']) {
+  padding: 10px 14px;
+}
+.live-chat-layout :is([role='status'], [role='alert'], .assigned-clients, .message-history > p, nav) {
+  font: 400 12px / 1.5 'IBM Plex Sans', sans-serif;
+  overflow-wrap: anywhere;
+}
+.live-chat-layout :is(.chat-list, .chat-thread) [role='alert'] {
+  border: 1px solid #eaeaeb;
+  border-radius: 10px;
+}
+.live-chat-layout :is(nav button, .assigned-clients button, .message-history button, p button),
+.live-notifications :is(nav button, [role='alert'] button) {
+  background: #f4f4f3;
+  border: 1px solid #eaeaeb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font: 400 12px / 18px 'IBM Plex Sans', sans-serif;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.live-chat-layout button:disabled,
+.live-notifications button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.live-chat-layout button:focus-visible,
+.live-notifications button:focus-visible {
+  outline: 2px solid #1d919e;
+  outline-offset: 2px;
+}
+.live-chat-layout nav,
+.live-notifications nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px;
+}
+.live-chat-layout .assigned-clients {
+  margin: 0 8px 10px;
+  padding: 12px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+}
+.live-chat-layout .assigned-clients > button {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+  text-align: left;
+}
+.live-chat-layout .assigned-clients nav {
+  padding: 12px 0 0;
+}
+.live-chat-layout .conversation-copy > span:first-child {
+  flex-wrap: wrap;
+}
+.live-chat-layout .conversation time {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Original notification panel 1:2079 (part1): safe generic API row adaptation,
+   not a claim that fixture people or unsupported actions exist in the API. */
+.live-notifications > :is(p, .notification-mark-all) {
+  margin: 10px 16px;
+}
+.live-notifications .notification-item.is-unread {
+  background: #fff;
+}
+.live-notifications .notification-item.is-read {
+  background: #f6f6f6;
+}
+.live-notifications .notification-kind-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f3f4f6;
+  margin-top: 4px;
+}
+.live-notifications .notification-kind-icon img {
+  width: 20px;
+  height: 20px;
+}
+.live-notifications .notification-title strong {
+  font: 700 14px / 20px 'DM Sans', sans-serif;
+  letter-spacing: -0.42px;
+}
+.live-notifications .notification-title time {
+  line-height: 16px;
+  white-space: normal;
+}
+.live-notifications .notification-body > p {
+  font: 400 14px / 1.3 'IBM Plex Sans Arabic', sans-serif;
+  color: #a9a9a9;
+}
+.live-notifications .notification-read-state {
+  display: block;
+  margin-top: 4px;
+  font: 400 12px / 16px 'IBM Plex Sans Arabic', sans-serif;
+  color: #747474;
+}
+.live-notifications .notification-actions {
+  flex-wrap: wrap;
+}
+.live-notifications .notification-unread-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  align-self: center;
+  border-radius: 50%;
+  background: #1d919e;
+}
+
+@media (max-width: 600px) {
+  /* 1:13211 / 1:13386 add a 92px alert above the same phone content.
+     Reset the inherited offline desktop height; preserve composer dimensions. */
+  .chat-layout.demo-chat-layout.is-offline {
+    height: auto;
+    min-height: calc(100svh - 164px);
+  }
+  .chat-layout.demo-chat-layout.is-offline .chat-list {
+    min-height: max(calc(100svh - 164px), 719px);
+  }
+  .chat-layout.demo-chat-layout.is-offline .chat-thread {
+    min-height: max(calc(100svh - 180px), 787.6px);
+  }
+  /* Both the phone thread (2:1484) and phone list (2:1667) use this shell edge. */
+  .chat-workspace .mobile-bottom-nav {
+    border: 1px solid #eff0f0;
+    border-radius: 18px 18px 0 0;
+  }
+  /* 2:1667 has no SLA card between its search and the first row. */
+  .chat-layout .chat-search {
+    margin-bottom: 10px;
+  }
+  /* Only the three original long fixture bubbles are full-width in 2:1484.
+     Short replies and arbitrary live messages remain content-sized. */
+  .chat-layout .reference-phone-wide .message-bubble {
+    width: 100%;
+  }
+  .chat-layout .message-composer input:not([hidden]) {
+    padding: 11px 14px;
+  }
+  /* Unlike the demo SLA, this search limitation must remain visible on phone. */
+  .live-chat-layout .chat-list .list-promise {
+    display: block;
+  }
+}
+
+/* 1:12906 / 1:13122 clip the header subtitle on one line; online tablet 1:12694 wraps it. */
+@media (min-width: 601px) and (max-width: 1100px) {
+  .demo-chat-layout.is-offline .chat-thread-header p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+}
+@media (max-width: 600px) {
+  .chat-layout .chat-thread-header p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  /* 1:13122 / 1:13211: the full SLA breaks after "business" in the source. */
+  .chat-layout .thread-promise span {
+    letter-spacing: -0.2px;
+  }
+}
+@media (min-width: 601px) {
+  /* Laptop viewports shorter than the 817px frames: fit the chat to the viewport
+     so the composer stays visible; history and list scroll inside their panels. */
+  .secondary-workspace.chat-workspace {
+    min-height: 100svh;
+  }
+  .chat-workspace .chat-layout {
+    height: max(calc(100svh - 69px), 420px);
+  }
+  .chat-workspace.secondary-offline .chat-layout {
+    height: max(calc(100svh - 145px), 380px);
+  }
+}

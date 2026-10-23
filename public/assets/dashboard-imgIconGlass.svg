@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-16" y="-16" width="72" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(8px);clip-path:url(#bgblur_0_0_60_clip_path);height:100%;width:100%"></div></foreignObject><g id="Icon glass" data-figma-bg-blur-radius="16">
+<rect width="40" height="40" rx="8" fill="white" fill-opacity="0.6"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="7.5" stroke="white" stroke-opacity="0.6"/>
+<path id="Icon" d="M14.8 17H24.8M14.8 21H24.8M28.8 28L25.4757 26.3378C25.2237 26.2118 25.0977 26.1488 24.9657 26.1044C24.8484 26.065 24.7277 26.0365 24.6052 26.0193C24.4672 26 24.3264 26 24.0446 26H14C12.8799 26 12.3199 26 11.8921 25.782C11.5157 25.5903 11.2098 25.2843 11.018 24.908C10.8 24.4802 10.8 23.9201 10.8 22.8V15.2C10.8 14.0799 10.8 13.5198 11.018 13.092C11.2098 12.7157 11.5157 12.4097 11.8921 12.218C12.3199 12 12.8799 12 14 12H25.6C26.7202 12 27.2802 12 27.708 12.218C28.0844 12.4097 28.3903 12.7157 28.5821 13.092C28.8 13.5198 28.8 14.0799 28.8 15.2V28Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_0_60_clip_path" transform="translate(16 16)"><rect width="40" height="40" rx="8"/>
+</clipPath></defs>
+</svg>

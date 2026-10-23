@@ -1,0 +1,121 @@
+.secondary-workspace .secondary-offline-banner {
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 42px;
+  padding: 11px 15px;
+  border: 1px solid #ffb900;
+  border-radius: 8px;
+  background: #fff4cc;
+  color: #fa7800;
+  font-size: 14px;
+  line-height: 18px;
+}
+.secondary-workspace .secondary-offline-banner > svg {
+  flex-shrink: 0;
+  color: #d97706;
+}
+.secondary-workspace.demo-workspace.secondary-offline :is(.sidebar, .secondary-topbar, .chat-layout, .profile-layout, .wallet-layout, .mobile-bottom-nav) {
+  opacity: .5;
+}
+.wallet-drawer-collapse {
+  display: none;
+}
+@media (min-width: 1101px) {
+  .wallet-workspace.demo-workspace.secondary-offline .secondary-topbar {
+    height: 69px;
+    padding: 16px;
+  }
+}
+@media (min-width: 601px) {
+  .secondary-workspace .sidebar {
+    height: 100svh;
+    min-height: 0;
+    align-self: flex-start;
+    overflow-y: auto;
+  }
+  .remaining-workspace.demo-workspace.secondary-offline:has(.profile-layout) .secondary-topbar {
+    height: 69px;
+    padding: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .wallet-workspace.is-expanded .sidebar {
+    height: 703px;
+    max-height: 100svh;
+    overflow-y: auto;
+  }
+  .wallet-workspace.is-expanded:has(.wallet-demo.wallet-overview) .sidebar {
+    height: 675px;
+  }
+  .wallet-workspace.is-expanded .sidebar-header {
+    margin-right: 22px;
+    padding-right: 6px;
+  }
+  .wallet-workspace.is-expanded .sidebar-header .brand-symbol {
+    box-shadow: none;
+  }
+  .wallet-workspace.is-expanded .collapse-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    background: white;
+    color: #657381;
+  }
+  .wallet-workspace.is-expanded .collapse-button > .design-icon {
+    display: none;
+  }
+  .wallet-workspace.is-expanded .wallet-drawer-collapse {
+    display: block;
+  }
+  .wallet-workspace.is-expanded .navigation {
+    padding-top: 12px;
+    gap: 2px;
+  }
+  .wallet-workspace.is-expanded .nav-item[aria-label='Sessions'] .design-icon {
+    content: url('/assets/dashboard-imgCalendarAlt.svg');
+  }
+  .wallet-workspace.is-expanded .nav-item[aria-label='Wallet'] .design-icon {
+    filter: brightness(0);
+  }
+  .wallet-workspace.is-expanded .sidebar-footer {
+    padding-right: 8px;
+  }
+  .profile-help-workspace {
+    flex-direction: column;
+  }
+  .profile-help-workspace .mobile-bottom-nav {
+    position: static;
+  }
+  .profile-help-workspace .secondary-topbar {
+    gap: 16px;
+  }
+  .profile-help-workspace .secondary-heading {
+    flex-shrink: 0;
+  }
+  .profile-help-workspace .secondary-heading h1 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -.72px;
+  }
+  .profile-help-workspace :is(.secondary-mobile-menu, .secondary-mobile-search) {
+    display: none !important;
+  }
+  .profile-help-workspace .secondary-actions {
+    flex: 1;
+    min-width: 0;
+    gap: 12px;
+  }
+  .profile-help-workspace .secondary-search {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    position: static;
+    box-shadow: none;
+  }
+  .secondary-workspace .secondary-offline-banner {
+    margin: 16px;
+    min-height: 60px;
+  }
+}

@@ -1,0 +1,214 @@
+/* Original consolidated FAQ exports 1:16123 / 1:16562 use a 371px dialog.
+   Both demo and live dialogs use these classes. Keep the existing phone width,
+   viewport cap, scrolling and natural height for truthful live API content. */
+@media (min-width: 601px) {
+  .remaining-modal.faq-modal {
+    width: 371px;
+  }
+
+  /* Original password exports 1:24673 / 1:26576 use 447px. */
+  .remaining-modal.password-modal {
+    width: 447px;
+  }
+
+  /* Original desktop logout export 1:25141; do not fix its height because
+     live revocation caveats and pending/error messages need natural wrapping. */
+  .remaining-modal.logout-modal {
+    width: 330px;
+  }
+
+  .remaining-modal.hours-modal {
+    inset-inline-start: -84px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .remaining-modal.preferences-modal {
+    inset-inline-start: -72px;
+  }
+}
+
+/* Reset native checkbox margins: 24px tracks plus 16px gaps give a 40px pitch. */
+.remaining-modal.preferences-modal .preferences-list label {
+  gap: 8px;
+}
+.remaining-modal.preferences-modal .preferences-list input[role='switch'] {
+  margin: 0;
+}
+.remaining-modal.preferences-modal .modal-heading {
+  margin-bottom: 24px;
+}
+.remaining-modal.preferences-modal .remaining-form-actions {
+  margin-top: 24px;
+}
+
+/* The session explanation stays separate, readable and naturally wrapping. */
+.remaining-modal.logout-modal > p:first-of-type {
+  color: #4a5565;
+  font: 400 14px/20px Arimo, Arial, sans-serif;
+  letter-spacing: -0.25px;
+}
+
+/* Originals 1:16123 / 1:16562: compact text rows, not a fixed-height dialog.
+   Answers (including live API notices) remain entirely in normal flow. */
+.remaining-modal.faq-modal .faq-list details {
+  border: 0.8px solid #f3f4f6;
+  border-radius: 14px;
+}
+.remaining-modal.faq-modal .faq-list summary {
+  font: 500 14px/20px Arimo, Arial, sans-serif;
+}
+.remaining-modal.faq-modal .faq-list p {
+  color: #4a5565;
+  font: 400 14px/22.75px Arimo, Arial, sans-serif;
+}
+
+/* The destructive action fills the footer after its compact Cancel button.
+   Do not shorten the live/demo session explanation to force a reference height. */
+.remaining-modal.logout-modal .remaining-form-actions > .remaining-danger {
+  flex: 1;
+}
+
+/* Consolidated originals 1:13472 / 1:14392 / 1:14857 use display-sized
+   numerals. Costaline is not licensed/shipped here: Georgia remains an honest
+   fallback, not font parity. Undo the older 24px component token. */
+.profile-summary .profile-counts strong {
+  font: 500 34px/36px Georgia, serif;
+}
+.profile-summary .profile-counts > div {
+  gap: 0;
+  padding: 4px 12px;
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  .profile-layout > .profile-summary {
+    width: auto;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .remaining-modal:is(.edit-modal, .preferences-modal, .logout-modal) {
+    max-width: calc(100vw - 30px);
+  }
+  /* 1:27963: retain the full editable biography, with room for five lines. */
+  .remaining-modal.edit-modal .remaining-field {
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+  .remaining-modal.edit-modal .profile-field-title {
+    width: min(100%, 256px);
+  }
+  .remaining-modal.edit-modal .remaining-form-actions {
+    margin-top: 12px;
+  }
+  .remaining-modal.edit-modal textarea {
+    height: 112px;
+    min-height: 112px;
+  }
+  .remaining-modal:is(.edit-modal, .preferences-modal, .holidays-modal, .hours-modal) .remaining-form-actions > button {
+    flex: 1;
+    min-width: 0;
+    padding-inline: 8px;
+  }
+
+  /* 1:28628: day label over its paired native time inputs. The live editor
+     uses a different multiple-window model and must not inherit this grid. */
+  .remaining-modal.hours-modal:has(.demo-hours-list) {
+    width: 348px;
+    max-width: calc(100vw - 22px);
+    max-height: calc(100svh - 48px);
+    inset-block: 32px auto;
+    margin-block: 0;
+  }
+  .remaining-modal.hours-modal .modal-heading {
+    margin-bottom: 24px;
+  }
+  .remaining-modal.hours-modal .remaining-form-actions {
+    margin-top: 24px;
+  }
+  .hours-modal .demo-hours-list > div {
+    grid-template-columns: minmax(0, 0.67fr) auto minmax(0, 1fr);
+    gap: 12px 8px;
+  }
+  .hours-modal .demo-hours-list label {
+    grid-column: 1 / -1;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  .hours-modal .demo-hours-list input[type='time'] {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .hours-modal .demo-hours-list input[type='checkbox'] {
+    margin: 0;
+  }
+  .hours-modal .demo-hours-list .day-off label {
+    grid-column: auto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .hours-modal .demo-hours-list .day-off > span {
+    grid-column: 2 / -1;
+    font-size: 14px;
+  }
+
+  .profile-layout > .profile-summary {
+    gap: 14px;
+  }
+  .profile-summary .profile-counts > div {
+    align-items: flex-start;
+    height: 71px;
+    padding: 8px 12px;
+  }
+  .profile-settings .profile-summary .profile-counts > div {
+    align-items: center;
+    text-align: center;
+  }
+  /* Each stacked information section already owns its 16px top padding.
+     A second grid gap was accumulating ahead of Contact Information. */
+  .profile-information .profile-information-grid {
+    row-gap: 0;
+  }
+  .profile-information-grid .profile-info-rows .profile-info-row {
+    min-height: 50px;
+  }
+}
+
+/* Originals 1:25657 / 1:27580 / 1:28862: the holiday remove control is a bare
+   muted 9px cross on the row tint, not a boxed white button. The 32px hit area
+   and keyboard focus ring remain. */
+.holidays-modal .holiday-list .holiday-remove {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.holidays-modal .holiday-list .holiday-remove img {
+  width: 20px;
+  height: 20px;
+}
+.holidays-modal .holiday-list strong {
+  color: #1e2939;
+  font: 400 14px/20px Arimo, Arial, sans-serif;
+}
+.holidays-modal .holiday-list p {
+  margin-top: 0;
+  color: #6a7282;
+  font: 400 12px/16px Arimo, Arial, sans-serif;
+}
+/* Same originals: Add Holiday ends in a thin 11px plus glyph, not a bold text "+". */
+.holidays-modal .remaining-form-actions .remaining-primary::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  vertical-align: -1px;
+  background: url('/assets/r4-profile-settings-plus.svg') center / contain no-repeat;
+}

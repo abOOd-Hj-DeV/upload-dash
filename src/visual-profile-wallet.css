@@ -1,0 +1,230 @@
+/* Local profile/wallet adaptations; reference tokens are from original RalEn8SStVMJf2KPmpePTk. */
+.profile-avatar.profile-avatar-initials {
+  display: grid;
+  place-items: center;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #3d5552;
+  font: 600 16px/1.2 'IBM Plex Sans', sans-serif;
+}
+.profile-avatar-initials + div,
+.profile-info-row > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.hours-list.live-hours-list {
+  border: 0;
+  margin: 16px 0;
+  padding: 0;
+}
+.live-hours-list .live-hours-day {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 14px;
+  min-width: 0;
+}
+.live-hours-day h3 {
+  color: #1e2939;
+  font: 600 16px/1.2 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.176px;
+}
+.live-hours-day > .remaining-cancel {
+  justify-self: start;
+}
+.live-hours-window {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 8px;
+}
+.live-hours-window .remaining-field {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  font-size: 12px;
+}
+.live-hours-window > button {
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+.holiday-list .holiday-copy {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.holiday-clock {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fffbeb;
+  filter: drop-shadow(0 1px 1px #1414140f);
+}
+.holiday-clock img {
+  width: 16px;
+  height: 16px;
+}
+.holiday-list .holiday-remove {
+  flex-shrink: 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+.holiday-remove img {
+  width: 16px;
+  height: 16px;
+}
+.faq-list summary > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.faq-list .faq-open-arrow,
+.faq-list .faq-closed-arrow {
+  flex-shrink: 0;
+}
+/* call-05-profile, node 6:534: 24px/1.2 count. Costaline is not shipped;
+   preserve the existing serif fallback without asserting font parity. */
+.profile-summary .profile-counts > div {
+  gap: 4px;
+  min-height: 67px;
+}
+.profile-summary .profile-counts strong {
+  font: 500 24px/1.2 Georgia, serif;
+  letter-spacing: -0.264px;
+}
+.live-contact-fields {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 16px;
+  padding: 0;
+  border: 0;
+}
+/* call-15-preferences, node 6:12062: 44x24 track, 20px thumb.
+   Conventional checked orientation is intentional; live controls remain disabled/unknown. */
+.preferences-modal .preferences-list label {
+  color: #1e2939;
+  font: 500 16px/24px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.48px;
+}
+.preferences-list input[role='switch'] {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: #d1d5dc;
+  box-shadow: inset 0 -4.05px 4.05px #ffffff40, inset 0 4.05px 11.137px #ffffff4d;
+}
+.preferences-list input[role='switch']:before {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 1px 3px #0000001a, 0 1px 2px #0000001a;
+}
+.preferences-list input[role='switch']:checked {
+  background: linear-gradient(139deg, #135e66 5.59%, #1d919e 82.06%);
+}
+.preferences-list input[role='switch']:checked:before {
+  left: 22px;
+}
+.holidays-modal .holiday-list article {
+  border: 0.8px solid #f3f4f6;
+  border-radius: 14px;
+  padding: 12px;
+  background: #f5f5f6;
+}
+.holidays-modal .remaining-form-actions .remaining-primary::after {
+  content: '+';
+  margin-left: 4px;
+}
+@media (max-width: 600px) {
+  /* call-10-mobile-faq, node 6:4081: only the phone context is verified. */
+  .faq-modal .faq-list details {
+    border: 0.8px solid #f3f4f6;
+    border-radius: 14px;
+  }
+  .faq-modal .faq-list summary {
+    font: 500 14px/20px Arimo, Arial, sans-serif;
+  }
+  .faq-modal .faq-list p {
+    color: #4a5565;
+    font: 400 14px/22.75px Arimo, Arial, sans-serif;
+  }
+}
+@media (min-width: 1101px) {
+  .desktop-wallet-bars .wallet-bar-column {
+    flex: 0 1 172px;
+  }
+}
+
+/* Live API has no chart series. Keep its explanatory summary in normal flow. */
+.wallet-live .wallet-summary {
+  display: grid;
+  gap: 12px;
+  padding: 22px 0;
+  color: #657381;
+  font: 400 14px/1.5 Inter, sans-serif;
+}
+.wallet-live .wallet-summary h2 {
+  color: #182521;
+  font: 600 18px/24px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.27px;
+}
+.wallet-live .wallet-total-numbers > div {
+  min-width: 0;
+}
+.wallet-live .wallet-stat-grid strong,
+.wallet-live .wallet-total-numbers strong,
+.wallet-live .wallet-phone-total .remaining-badge {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.wallet-live .wallet-stat-grid p > span:last-child,
+.wallet-live .wallet-phone-total > p > span,
+.wallet-live .wallet-phone-total > button > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wallet-live .wallet-transaction-copy,
+.wallet-live .wallet-transaction-status {
+  overflow-wrap: anywhere;
+}
+.wallet-live .wallet-transaction-status {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
+  max-width: 50%;
+}
+.wallet-live .wallet-transaction-status > .withdrawal-pending {
+  color: #657381;
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+.wallet-live .wallet-transaction-status > .withdrawal-approved {
+  color: #1d919e;
+  background: #1d919e1a;
+  border-color: #1d919e;
+}
+.wallet-live .wallet-transaction-status > .withdrawal-rejected {
+  color: #9e1d1f;
+  background: #fff;
+  border-color: #9e1d1f;
+}
+@media (max-width: 600px) {
+  /* The demo hides these tabs because it has chart/total shortcuts; live does not. */
+  .wallet-live.wallet-overview .wallet-tabs {
+    display: flex;
+  }
+  .wallet-live .wallet-tabs .wallet-withdraw-button {
+    display: block;
+    flex-basis: 100%;
+    margin: 8px 0;
+  }
+  .wallet-live.wallet-overview .wallet-panel {
+    margin-bottom: 0;
+  }
+  .wallet-live.wallet-overview .wallet-advisory {
+    position: static;
+    width: auto;
+  }
+}

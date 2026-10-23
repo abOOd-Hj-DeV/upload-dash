@@ -1,0 +1,114 @@
+/* Figma phone/tablet expanded navigation: floating popup over blurred page. */
+@media (max-width: 1100px) {
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar {
+    display: flex;
+    position: fixed;
+    inset: 0 auto auto 0;
+    width: 264px;
+    height: min(675px, 100svh);
+    max-height: 100svh;
+    min-height: 0;
+    border-radius: 0 0 24px 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: none;
+    z-index: 11;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: #0009;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar-header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 72px;
+    margin: 0 22px 0 16px;
+    padding: 16px 6px 16px 0;
+    gap: 8px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .brand-wordmark,
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .nav-text,
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .nav-label,
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .client-reminder {
+    display: block;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .profile-copy {
+    display: flex;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar .compact-reminder {
+    display: none;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 12px;
+    background: white;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .collapse-button .design-icon {
+    width: 20px;
+    height: 20px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .navigation {
+    padding: 12px 16px 0 8px;
+    gap: 2px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .nav-label {
+    padding-bottom: 6px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .nav-item {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    justify-content: flex-start;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .nav-item:not(.active) {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .nav-item.active {
+    background: #f8f8f8;
+    border-radius: 16px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .nav-badge {
+    position: static;
+    margin-left: auto;
+    min-width: 20px;
+    height: 18px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar-footer {
+    padding: 8px 8px 0;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .profile-card {
+    width: 100%;
+    height: 54px;
+    padding: 6px;
+    border: 0;
+    background: linear-gradient(140.45deg, #135e66 5.59%, #1d919e 82.06%);
+  }
+  .visual-demo-dashboard.is-expanded .collapse-button img {
+    content: url('/assets/r4-nav-popup-minimize.svg');
+  }
+  .visual-demo-dashboard.is-expanded .dashboard-active-icon {
+    background: #0a0a0a;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .profile-card > .design-icon {
+    display: block;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .profile-card img {
+    border-radius: 8px;
+  }
+  :is(.secondary-workspace, .visual-demo-dashboard).is-expanded .sidebar:focus {
+    outline: none;
+  }
+}
