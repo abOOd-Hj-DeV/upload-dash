@@ -1,0 +1,161 @@
+.clients-page {
+  padding: 0 16px 16px;
+  font: 400 14px/1.3 'IBM Plex Sans Arabic', sans-serif;
+}
+.clients-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 0 16px;
+}
+.clients-filters {
+  display: flex;
+  gap: 20px;
+  padding: 4px;
+  border: 1px solid #eff0f0;
+  background: #fff;
+  border-radius: 12px;
+}
+.clients-filters button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #6a7282;
+}
+.clients-filters button.selected {
+  color: #fff;
+  background: #1d8590;
+  box-shadow: inset 0 -3px 3px #ffffff40, inset 0 3px 10px #ffffff4d;
+}
+.clients-filter-toggle {
+  display: grid;
+  place-items: center;
+  padding: 13px;
+  background: white;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+}
+.clients-filter-toggle img {
+  width: 16px;
+  height: 16px;
+}
+.clients-filter-options:not([hidden]) {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: white;
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+.client-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+  background: #fff;
+  min-width: 0;
+}
+.client-card > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: start;
+}
+.client-card-identity {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  min-width: 0;
+  text-align: left;
+}
+.client-card-identity .avatar {
+  width: 40px;
+  height: 42px;
+  border-radius: 12px;
+  border: 2px solid #ebebeb;
+  flex-shrink: 0;
+}
+.client-card-identity strong {
+  display: block;
+  color: #1e293b;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -.54px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.client-card-identity small {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -.36px;
+}
+.client-card-status {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #64748b;
+}
+.client-card-status.active {
+  background: #e4f1f1;
+  color: #1b7a7a;
+}
+.client-card-activity,
+.client-card-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+.client-card-activity small {
+  font-size: 11px;
+  text-align: end;
+}
+.client-card-metrics strong {
+  font-size: 14px;
+  color: #1e293b;
+  font-weight: 500;
+}
+.client-card-next {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #64748b;
+  font-size: 12px;
+}
+.client-card-next img {
+  width: 16px;
+  height: 16px;
+}
+.client-card footer {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #eff0f0;
+  padding-top: 12px;
+  color: #157c88;
+  font-weight: 600;
+}
+.clients-page > nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 1100px) {
+  .clients-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .clients-grid { grid-template-columns: minmax(0, 1fr); }
+  .clients-filters { flex: 1; justify-content: space-between; gap: 0; }
+  .clients-filters button { padding-inline: 8px; }
+  .clients-toolbar { gap: 8px; }
+}

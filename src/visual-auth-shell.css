@@ -1,0 +1,236 @@
+/* R1 1:6395/1:6581/1:6857 and 1:6438/1:6900: scoped auth geometry. */
+.auth-page.visual-auth {
+  background: radial-gradient(ellipse 297.76% 297.75% at 50% 50%,
+      rgb(29 145 158 / 0) 0%, rgb(29 145 158 / 0.9) 100%), #fafafa;
+}
+
+/* The cached grain asset already carries 5% alpha. */
+.auth-page.visual-auth::before {
+  opacity: 1;
+  z-index: -2;
+}
+
+.auth-page.visual-auth.demo-auth {
+  padding-inline: 2px;
+}
+
+.auth-page.visual-auth.demo-auth .auth-card {
+  padding: 15px;
+}
+
+.auth-page.visual-auth.demo-login .auth-form > label:first-child {
+  height: 54px;
+  justify-content: center;
+}
+
+.auth-page.visual-auth.demo-login .auth-form > label:first-child input {
+  flex-shrink: 0;
+}
+
+.auth-page.visual-auth.demo-login .auth-card {
+  gap: 24px;
+}
+.auth-page.visual-auth.demo-login .primary-button {
+  text-transform: lowercase;
+}
+.auth-page.visual-auth.demo-login .auth-legal {
+  width: 345px;
+  max-width: 100%;
+  align-self: center;
+}
+.auth-page.visual-auth.demo-auth .brand-symbol {
+  border: 0;
+  box-shadow: 0 0.8px 4px #0000003b,
+    inset 0 0 0 0.221px #fff,
+    inset 0 -4.414px 4.414px #ffffff40,
+    inset 0 4.414px 12.138px -5.517px #ffffff4d;
+}
+.auth-page.visual-auth.demo-auth .brand-symbol::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/dashboard-imgFrame2147234885.png') 0 0 / 524.138px 524.138px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+.auth-page.visual-auth.demo-auth .brand-symbol img {
+  width: 27.586px;
+  height: 27.586px;
+  left: 2.21px;
+  top: 1.19px;
+  mask-size: 27.586px 27.586px;
+  mask-position: 0 -0.083px;
+  mask-repeat: no-repeat;
+}
+
+.auth-page.visual-auth.demo-auth .auth-card-content,
+.auth-page.visual-auth.demo-auth .auth-intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.auth-page.visual-auth.demo-login .auth-card-content {
+  gap: 16px;
+}
+
+.auth-page.visual-auth.signup-page .auth-card-content,
+.auth-page.visual-auth.demo-auth .auth-intro {
+  gap: 20px;
+}
+
+.auth-page.visual-auth.demo-auth .auth-card-content .divider {
+  margin: 0;
+}
+
+.auth-page.visual-auth.demo-auth .auth-card-content .forgot-link {
+  color: #616171;
+  font: 600 12px/14.4px 'Inter', sans-serif;
+  letter-spacing: -0.48px;
+}
+
+.auth-page.visual-auth.signup-page .name-fields {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+
+.auth-page.visual-auth.signup-page .auth-heading h1 {
+  font: 600 18px/1.2 'Inter', sans-serif;
+  letter-spacing: -0.72px;
+}
+
+.auth-page.visual-auth.signup-page .auth-form label {
+  font: 400 14px/14px 'Inter', sans-serif;
+  letter-spacing: -0.56px;
+}
+@media (min-width: 601px) {
+  .auth-page.visual-auth.signup-page .auth-form > label {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  .auth-page.visual-auth.demo-login .auth-heading h1 {
+    font: 600 18px/1.2 'Inter', sans-serif;
+    letter-spacing: -0.72px;
+  }
+
+  .auth-page.visual-auth.demo-login .auth-form label {
+    font: 400 14px/14px 'Inter', sans-serif;
+    letter-spacing: -0.56px;
+  }
+}
+
+/* R2 2:308 chat/care sidebar; R3 profile/wallet typography stays untouched. */
+.visual-auth-shell.secondary-workspace:not(.remaining-workspace) .nav-label {
+  font: 500 12px/16px 'Inter', sans-serif;
+  letter-spacing: 0.48px;
+  color: #9da3a9;
+}
+
+.visual-auth-shell.secondary-workspace:not(.remaining-workspace) .nav-item {
+  font: 500 16px/24px 'Inter', sans-serif;
+}
+
+@media (min-width: 1101px) {
+  .visual-auth-shell.secondary-workspace:not(.remaining-workspace) .navigation {
+    gap: 2px;
+  }
+
+  .visual-auth-shell.secondary-workspace:not(.remaining-workspace) .nav-label {
+    padding-bottom: 6px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  :is(.visual-demo-dashboard, .visual-auth-shell.secondary-workspace:not(.remaining-workspace)):not(.is-expanded) .sidebar-header {
+    height: 104px;
+  }
+  :is(.visual-demo-dashboard, .visual-auth-shell.secondary-workspace:not(.remaining-workspace)):not(.is-expanded) .navigation {
+    padding: 16px 18px;
+    align-items: center;
+  }
+  :is(.visual-demo-dashboard, .visual-auth-shell.secondary-workspace:not(.remaining-workspace)):not(.is-expanded) .nav-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+  :is(.visual-demo-dashboard, .visual-auth-shell.secondary-workspace:not(.remaining-workspace)):not(.is-expanded) .compact-reminder {
+    width: 44px;
+    height: 44px;
+  }
+  .visual-auth-shell.secondary-workspace:not(.remaining-workspace):not(.is-expanded) .profile-card {
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+  }
+}
+
+/* Live WhatsApp flows adapt the cached auth language, not the email/five-digit contract. */
+.auth-page.live-auth {
+  min-height: 100svh;
+}
+
+.auth-page.live-auth .auth-stack,
+.auth-page.live-auth .auth-card,
+.auth-page.live-auth .auth-heading,
+.auth-page.live-auth .auth-heading > div,
+.auth-page.live-auth .auth-form,
+.auth-page.live-auth .auth-form label {
+  min-width: 0;
+}
+
+.auth-page.live-auth .auth-heading h1,
+.auth-page.live-auth .auth-heading p,
+.auth-page.live-auth .auth-switch,
+.auth-page.live-auth .auth-legal,
+.auth-page.live-auth .auth-notice,
+.auth-page.live-auth .live-auth-feedback,
+.auth-page.live-auth .live-auth-help,
+.auth-page.live-auth .live-auth-field-error {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.auth-page.live-auth .auth-heading h1 {
+  text-align: center;
+}
+
+.auth-page.live-auth .live-auth-help,
+.auth-page.live-auth .live-auth-field-error,
+.auth-page.live-auth .live-auth-feedback,
+.auth-page.live-auth .auth-notice {
+  font: 400 12px/18px 'Inter', sans-serif;
+  letter-spacing: -0.48px;
+  color: #616171;
+}
+
+.auth-page.live-auth .live-auth-feedback,
+.auth-page.live-auth .live-auth-request {
+  padding: 12px;
+  border: 1px solid #eff1f5;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.auth-page.live-auth .live-auth-request {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-page.live-auth .auth-switch {
+  flex-wrap: wrap;
+  text-align: center;
+  row-gap: 4px;
+}
+
+.auth-page.live-auth .auth-switch button:disabled {
+  color: #616171;
+}
+
+.visual-auth-shell .secondary-search input:disabled,
+.visual-auth-shell .secondary-mobile-search:disabled {
+  cursor: not-allowed;
+}

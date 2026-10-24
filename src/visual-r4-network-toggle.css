@@ -1,0 +1,74 @@
+/* Development demo control only; never rendered in live or production builds. */
+/* Tablet/desktop: the empty header gap between page title and search. */
+.demo-network-toggle {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #c9dfe2;
+  border-radius: 999px;
+  background: #ffffffeb;
+  box-shadow: 0 2px 10px #0000001a;
+  color: #1d919e;
+  font: 500 12px/16px 'Inter', system-ui, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.demo-network-toggle:hover {
+  background: #f2f9fa;
+}
+.demo-network-toggle:focus-visible {
+  outline: 2px solid #1d919e;
+  outline-offset: 2px;
+}
+.demo-network-toggle.is-simulated {
+  border-color: #ffb900;
+  background: #fff4cc;
+  color: #b35600;
+}
+.demo-network-toggle.is-browser-offline {
+  border-color: #e7e8e8;
+  color: #5c6566;
+  cursor: default;
+}
+.demo-network-toggle__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2bb673;
+  flex-shrink: 0;
+}
+.demo-network-toggle.is-simulated .demo-network-toggle__dot,
+.demo-network-toggle.is-browser-offline .demo-network-toggle__dot {
+  background: #fa7800;
+}
+.demo-network-toggle__hint {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/* Phone headers have no free gap, so float centered at the bottom edge. */
+@media (max-width: 600px) {
+  .demo-network-toggle {
+    top: auto;
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  /* Keep clear of the sticky 72px phone navigation where it exists. */
+  body:has(.mobile-bottom-nav) .demo-network-toggle {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+@media print {
+  .demo-network-toggle {
+    display: none;
+  }
+}

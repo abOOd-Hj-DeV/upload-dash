@@ -1,0 +1,107 @@
+.demo-all-sessions.final-session-list {
+  padding: 16px;
+}
+
+.final-session-list .session-row-portrait {
+  display: block;
+  flex-shrink: 0;
+}
+
+.final-session-list .session-phone-portrait {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .demo-workspace:has(.final-session-list) .secondary-topbar {
+    height: 68px;
+  }
+
+  /* Preserve the source 48px rows + 11px spacing; correct the panel's scroll budget. */
+  .final-session-list .sessions-list-scroll {
+    max-height: max(500px, calc(100svh - 212px));
+  }
+}
+
+/* Short laptop viewports at normal browser scale end the panel inside the viewport. */
+@media (min-width: 601px) and (max-height: 711px) {
+  .final-session-list .sessions-list-scroll {
+    max-height: max(240px, calc(100svh - 212px));
+  }
+}
+
+@media (min-width: 1101px) {
+  .final-session-list > header button {
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    background: none;
+    color: #1d919e;
+    font:
+      500 12px/16px 'IBM Plex Sans Arabic',
+      sans-serif;
+  }
+
+  .final-session-list .see-all-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.demo-workspace.is-collapsed:has(.final-session-list) .nav-item[aria-current='page'] .design-icon {
+  content: url('/assets/preview-client-list-calendar.svg');
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+  .demo-workspace:not(.is-expanded):has(.final-session-list)
+    .nav-item[aria-current='page']
+    .design-icon {
+    content: url('/assets/preview-client-list-calendar.svg');
+  }
+}
+
+@media (max-width: 600px) {
+  .final-session-list .session-desktop-portrait {
+    display: none;
+  }
+
+  .final-session-list .session-phone-portrait {
+    display: block;
+  }
+
+  .demo-workspace:has(.final-session-list) .demo-sessions-toolbar {
+    padding-top: 10px;
+    gap: 16px;
+  }
+
+  .demo-workspace:has(.final-session-list) .session-tabs {
+    background: #fff;
+    border: 1px solid #eff0f0;
+    border-radius: 12px;
+    padding: 4px;
+  }
+
+  .demo-workspace:has(.final-session-list) .session-tabs button {
+    line-height: 17px;
+  }
+
+  .demo-all-sessions.final-session-list {
+    margin-inline: 0;
+  }
+
+  .final-session-list > header {
+    padding-bottom: 10px;
+  }
+
+  .final-session-list .all-sessions-table td {
+    padding-inline: 0;
+  }
+
+  .final-session-list .all-sessions-table .patient-cell {
+    gap: 4px;
+    padding-block: 0;
+  }
+
+  .final-session-list .patient-name {
+    overflow-wrap: anywhere;
+  }
+}

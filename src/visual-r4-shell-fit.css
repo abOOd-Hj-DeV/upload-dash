@@ -1,0 +1,29 @@
+/* R4 shell fit: desktop sidebars stay one viewport tall so the reminder and therapist card remain visible at 100% zoom. */
+@media (min-width: 1101px) {
+  .workspace > aside.sidebar {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100svh;
+    min-height: 0;
+    max-height: 100svh;
+    overflow-y: auto;
+  }
+  .workspace > aside.sidebar > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+  .workspace > aside.sidebar .navigation {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+  .workspace > aside.sidebar > .sidebar-footer {
+    flex-shrink: 0;
+  }
+}

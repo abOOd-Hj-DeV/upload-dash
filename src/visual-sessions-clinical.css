@@ -1,0 +1,643 @@
+/* Sessions/clinical-only repairs; imported by api-sessions-and-clinical-support.tsx. */
+.care-session-detail > .care-session-actions {
+  order: 2;
+  margin-bottom: 16px;
+}
+.care-session-detail > .detail-grid,
+.care-session-detail > .care-clinical-unavailable {
+  order: 3;
+}
+.care-session-detail > .care-session-history {
+  order: 4;
+  margin-top: 16px;
+}
+
+/* List portrait bounds in the original 1440/770/370 contexts are 40 by 42. */
+.all-sessions-table th {
+  font-family: 'Geist', sans-serif;
+}
+
+.demo-sessions-toolbar {
+  padding-bottom: 16px;
+}
+.demo-sessions-toolbar > .teal-button {
+  gap: 8px;
+  padding-right: 8px;
+}
+.demo-sessions-toolbar > .teal-button .design-icon {
+  width: 16px;
+  height: 16px;
+}
+.demo-sessions-toolbar .session-tabs {
+  background: #fff;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 16px;
+}
+.demo-sessions-toolbar .session-tabs button {
+  padding: 6px 12px;
+  gap: 4px;
+  color: #4a4e52;
+  font: 600 13px/normal 'IBM Plex Sans', sans-serif;
+}
+.demo-sessions-toolbar .session-tabs button.selected {
+  background: #1d8590;
+  color: #fff;
+  box-shadow: inset 0 -3px 3px #ffffff40, inset 0 3px 10px #ffffff4d;
+}
+.demo-all-sessions {
+  padding: 17px;
+  background: #fff;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+}
+.demo-all-sessions > header {
+  padding: 0 0 11px;
+}
+.demo-all-sessions h2 {
+  font: 400 18px/24px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.54px;
+  color: #101828;
+}
+.demo-all-sessions > header button {
+  display: none;
+}
+.demo-all-sessions .all-sessions-table {
+  border-collapse: separate;
+  border-spacing: 0 11px;
+  margin-block: -11px;
+}
+.demo-all-sessions .all-sessions-table th {
+  width: 33.333%;
+  height: 40px;
+  padding: 8px 12px;
+  background: #f8f8f8;
+  border-block: 1px solid #eff0f0;
+  font: 400 14px/21px 'Geist', sans-serif;
+}
+.demo-all-sessions .all-sessions-table th:first-child {
+  border-left: 1px solid #eff0f0;
+  border-radius: 8px 0 0 8px;
+}
+.demo-all-sessions .all-sessions-table th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.demo-all-sessions .all-sessions-table :is(th, td):not(:first-child) {
+  text-align: center;
+}
+.demo-all-sessions .all-sessions-table td {
+  height: 48px;
+  padding: 0 4px;
+  border: 0;
+}
+.demo-all-sessions .all-sessions-table tbody tr:hover {
+  background: #f8f8f8;
+}
+.demo-all-sessions .patient-name {
+  font: 400 14px/18.2px 'IBM Plex Sans Arabic', sans-serif;
+}
+@media (min-width: 601px) {
+  .demo-all-sessions .all-sessions-table .avatar {
+    width: 40px;
+    height: 42px;
+  }
+}
+.demo-all-sessions .patient-cell small {
+  letter-spacing: -0.36px;
+}
+.demo-all-sessions .session-status {
+  font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  padding: 2px 8px 2px 4px;
+  gap: 2px;
+}
+@media (max-width: 600px) {
+  .demo-sessions-toolbar .session-tabs {
+    gap: 4px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+  .demo-sessions-toolbar .session-tabs button {
+    padding: 6px;
+  }
+  .demo-all-sessions {
+    margin-top: 0;
+    padding: 12px;
+  }
+  .demo-all-sessions .all-sessions-table :is(th, td) {
+    padding-inline: 4px;
+  }
+  .demo-all-sessions .all-sessions-table th:first-child {
+    width: 42%;
+  }
+  .demo-all-sessions .all-sessions-table th:nth-child(2) {
+    width: 28%;
+  }
+  /* Original 1:30405 stacks the 40x42 portrait over readable patient text. */
+  .demo-all-sessions .all-sessions-table th {
+    font-size: 14px;
+  }
+  .demo-all-sessions .all-sessions-table .patient-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-block: 4px;
+  }
+  .demo-all-sessions .patient-name {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .demo-all-sessions .all-sessions-table .patient-cell small {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .demo-all-sessions .all-sessions-table .session-date {
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+  .demo-all-sessions .session-status {
+    font-size: 12px;
+    gap: 2px;
+    padding: 2px 8px 2px 4px;
+  }
+}
+
+.all-sessions-table .patient-cell .avatar {
+  width: 40px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.care-avatar.avatar,
+.care-avatar.detail-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #364153;
+  font: 600 14px/20px 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.homework-check.care-module-status {
+  cursor: default;
+}
+.homework-check.care-module-status > span:first-of-type {
+  flex-shrink: 0;
+}
+.homework-check.care-module-status input:not(:checked) + span {
+  background: #fff;
+  border: 0.8px solid #e5e7eb;
+  box-shadow: none;
+}
+
+/* Original file dbEbuybwc2dUDJ9QCwNjWL, nodes 2:6579 and 2:5406. */
+.part2-modal.homework-modal.is-create {
+  width: min(500px, calc(100vw - 32px));
+}
+.part2-modal.homework-modal .modal-heading h2 {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.3px;
+}
+.part2-modal.homework-modal .part2-form {
+  gap: 8px;
+}
+.part2-modal.homework-modal .part2-form label {
+  font-size: 14px;
+  line-height: 16px;
+}
+.part2-modal.homework-modal .part2-form :is(input, select, textarea) {
+  border: 0.8px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f8fafc;
+  font-size: 14px;
+  line-height: 1.3;
+}
+.part2-modal.homework-modal.demo-homework-modal.is-create textarea {
+  height: 91px;
+}
+/* The original homework Backdrop children are centered, unlike the meeting
+   composition: cached 1:31894 is y459/h525.8 at 770x1443 and 1:32616 is
+   y631.6/h537.8 at 370x1800.8. Do not apply the meeting's upper anchor here.
+   Keep short/zoomed viewports scrollable with space for native focus outlines. */
+.part2-modal.demo-homework-modal {
+  margin: auto;
+  max-height: calc(100svh - 32px);
+  overflow-y: auto;
+}
+.part2-modal.demo-homework-modal .modal-heading {
+  margin-bottom: 8px;
+}
+.part2-modal.demo-homework-modal .segmented-control {
+  margin-bottom: 8px;
+}
+.part2-modal.demo-homework-modal .part2-form :is(input, select) {
+  height: 41.6px;
+}
+.part2-modal.demo-homework-modal.is-create .part2-form label {
+  gap: 10px;
+}
+.part2-modal.demo-homework-modal.is-create .form-footer {
+  margin-top: 4px;
+}
+.part2-modal.demo-homework-modal.is-library {
+  width: min(508px, calc(100vw - 32px));
+}
+@media (max-width: 369px) {
+  .demo-sessions-toolbar .session-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2px;
+  }
+  .demo-sessions-toolbar .session-tabs button {
+    padding-inline: 4px;
+    font-size: 12px;
+  }
+}
+
+/* Original schedule dialog 2:2343, width 415 and heading 20/32. */
+.part2-modal.schedule-modal {
+  width: min(415px, calc(100vw - 48px));
+}
+.part2-modal.schedule-modal .modal-heading {
+  margin-bottom: 16px;
+}
+.part2-modal.schedule-modal .modal-heading h2 {
+  line-height: 32px;
+  letter-spacing: -0.3px;
+}
+.part2-modal.schedule-modal .part2-form label {
+  line-height: 16px;
+  gap: 10px;
+}
+.part2-modal.schedule-modal .part2-form :is(input, select) {
+  height: 41.6px;
+  border: 0.8px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+.part2-modal.schedule-modal .form-footer {
+  margin-top: 0;
+}
+.part2-modal.schedule-modal .form-footer button {
+  font: 600 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+  padding: 10px 16px;
+}
+
+/* Quick Clinical Summary 2:3865: a 10% teal wash with the cached 2% grain layer. */
+.session-detail .clinical-summary {
+  position: relative;
+  overflow: hidden;
+  background: rgba(35, 148, 161, 0.1);
+}
+.session-detail .clinical-summary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url('/assets/dashboard-imgFrame2147234885.png') left top / 475px 475px;
+  opacity: 0.02;
+  pointer-events: none;
+}
+.session-detail .clinical-summary > * {
+  position: relative;
+}
+
+/* Repair two: individual source card budgets, not a page-level translation.
+   Cached 1:31509/31549/31577 and 1:32304/32344/32372 retain natural growth
+   for longer notes, assignments and accessible, non-clipped warning text. */
+.demo-session-detail .detail-card h3 {
+  font: 600 16px/19.2px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.176px;
+  color: #101828;
+}
+.demo-session-detail .overview-card {
+  padding: 16px;
+}
+.demo-session-detail .overview-card h3 {
+  margin-bottom: 14px;
+}
+.demo-session-detail .overview-card dl {
+  margin: 0 0 14px;
+  display: grid;
+  gap: 14px;
+}
+.demo-session-detail .overview-card dl > div {
+  padding: 0;
+  font: 500 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .overview-card dt,
+.demo-session-detail .checklist-card label {
+  color: #99a1af;
+  font-weight: 500;
+}
+.demo-session-detail .checklist-card {
+  padding: 20px;
+}
+.demo-session-detail .checklist-card h3 {
+  margin-bottom: 0;
+}
+.demo-session-detail .checklist-card label {
+  padding: 9px 0;
+  font: 500 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .checklist-card label:first-of-type {
+  padding-top: 14px;
+}
+.demo-session-detail .clinical-summary h3 {
+  margin-bottom: 16px;
+}
+.demo-session-detail .clinical-summary strong {
+  display: block;
+  font: 600 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .clinical-summary p {
+  margin-top: 3px;
+  color: #99a1af;
+  font: 500 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .clinical-summary > div {
+  padding-bottom: 16px;
+  min-height: 58px;
+}
+.demo-session-detail .clinical-badge {
+  font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  padding: 3px 8px;
+}
+.demo-session-detail .clinical-summary .soft-button {
+  min-width: 182px;
+  min-height: 40.8px;
+  font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .suggested-focus h3 {
+  margin-bottom: 0;
+}
+.demo-session-detail .suggested-focus strong {
+  display: block;
+  font: 600 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .suggested-focus li {
+  font: 400 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .suggested-focus p {
+  font: 400 12.5px/21.25px 'Tajawal', sans-serif;
+  color: #6b7280;
+}
+.demo-session-detail .clinical-pathway h3 {
+  margin-bottom: 0;
+}
+.demo-session-detail .clinical-pathway > div:first-of-type {
+  padding-top: 18px;
+}
+.demo-session-detail .clinical-pathway > :last-child {
+  padding-bottom: 16px;
+}
+.demo-session-detail .clinical-pathway strong {
+  line-height: 18px;
+}
+.demo-session-detail .clinical-pathway small {
+  display: block;
+  padding-top: 4px;
+  line-height: 18.4px;
+}
+.demo-session-detail :is(.notes-card, .homework-card) {
+  padding: 16px;
+}
+.demo-session-detail .notes-card h3 {
+  margin-bottom: 9px;
+}
+.demo-session-detail .notes-card textarea {
+  font: 600 14px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .notes-card > .teal-button {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  gap: 6px;
+}
+.demo-session-detail .notes-card .section-caption {
+  margin: 16px 0 10px;
+  padding-left: 4px;
+  color: #7c8085;
+  font: 600 14px/17px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .previous-note {
+  margin-top: 0;
+}
+.demo-session-detail .previous-note > span:first-child {
+  min-width: 0;
+}
+.demo-session-detail .previous-note-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 6px;
+}
+.demo-session-detail .previous-note strong {
+  font: 600 16px/19.2px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.176px;
+}
+.demo-session-detail .previous-note small {
+  font: 400 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.36px;
+  color: #7c8085;
+}
+.demo-session-detail .previous-note p {
+  margin-top: 3px;
+  font: 400 13.5px/17.6px 'IBM Plex Sans', sans-serif;
+}
+.demo-session-detail .homework-card h3 {
+  margin-bottom: 8px;
+}
+.demo-session-detail .homework-card .section-caption {
+  font: 400 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .homework-check {
+  padding: 10px 0;
+  gap: 12px;
+  border-top: 0.8px solid #f0f1f3;
+  border-bottom: 0;
+}
+.demo-session-detail .homework-check:first-of-type {
+  margin-top: 10px;
+}
+.demo-session-detail .homework-check strong {
+  display: block;
+  line-height: 16px;
+}
+.demo-session-detail .homework-check small {
+  font: 400 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  letter-spacing: -0.36px;
+  color: #99a1af;
+}
+.demo-session-detail .homework-card .new-assignment-title {
+  margin-top: 18px;
+  font: 600 11px/14px 'Tajawal', sans-serif;
+}
+.demo-session-detail .no-assignments {
+  padding-top: 20px;
+  font: 400 12px/14px 'Tajawal', sans-serif;
+  min-height: 44px;
+}
+.demo-session-detail .homework-add {
+  padding-top: 0;
+}
+.demo-session-detail .homework-add button {
+  font-weight: 500;
+}
+.demo-session-detail .outcome-card {
+  padding: 20px;
+}
+.demo-session-detail .outcome-card h3 {
+  margin: 0;
+}
+.demo-session-detail .outcome-card > label:first-of-type {
+  font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .outcome-card textarea {
+  height: 74.2px;
+  font: 400 13px/20px 'Tajawal', sans-serif;
+}
+.demo-session-detail :is(.outcome-checkbox, .clinical-flag label) {
+  font: 400 12px/16px 'Tajawal', sans-serif;
+  gap: 9px;
+}
+.demo-session-detail .clinical-flag label {
+  min-height: 20px;
+  margin-bottom: 6px;
+}
+.demo-session-detail .clinical-flag-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.demo-session-detail .clinical-flag-icon {
+  flex-shrink: 0;
+  color: #b91c1c;
+}
+.demo-session-detail .clinical-flag p {
+  font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .continuity-info {
+  margin-top: 22px;
+  font: 400 14px/18px 'IBM Plex Sans Arabic', sans-serif;
+}
+.demo-session-detail .record-footer {
+  gap: 16px;
+}
+@media (min-width: 1101px) {
+  .demo-session-detail .overview-card h3 {
+    margin-bottom: 22px;
+  }
+  .demo-session-detail .overview-card dl {
+    gap: 26px;
+  }
+  .demo-session-detail.show-record .detail-tabs {
+    margin-top: -16px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  .demo-session-detail .detail-tabs {
+    margin-bottom: 12px;
+  }
+  .demo-session-detail .detail-overview > .overview-card {
+    flex: 0 0 calc((100% - 16px) * 0.494);
+  }
+  .demo-session-detail .overview-card > .teal-button {
+    background: #fff;
+    color: #374151;
+    border: 0.8px solid #eaeaeb;
+    box-shadow: none;
+    font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  }
+  .demo-session-detail .clinical-flag p {
+    font: 400 12px/16px 'Tajawal', sans-serif;
+    letter-spacing: -0.1px;
+  }
+  .demo-session-detail .continuity-info {
+    letter-spacing: -0.1px;
+  }
+}
+@media (max-width: 600px) {
+  .demo-workspace:has(.demo-session-detail) .secondary-heading h1 {
+    direction: rtl;
+    text-align: left;
+  }
+  .demo-session-detail .overview-card > .teal-button {
+    font: 500 12px/16px 'IBM Plex Sans Arabic', sans-serif;
+  }
+  .demo-session-detail .notes-card > .teal-button {
+    width: 100%;
+    justify-content: center;
+  }
+  .demo-session-detail .previous-note-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .demo-session-detail .previous-note p {
+    font-size: 12.5px;
+  }
+  .demo-session-detail .clinical-summary > div {
+    padding-bottom: 17px;
+  }
+  .demo-session-detail .clinical-badge {
+    margin-top: 18px;
+  }
+  .demo-session-detail .outcome-card {
+    padding: 16px;
+  }
+  .demo-session-detail .record-footer {
+    gap: 8px;
+  }
+}
+
+/* Original action dropdown 2:3934; keep its responsive anchor from secondary.css. */
+.session-detail .session-actions-menu {
+  width: 199px;
+  box-shadow: 0 24px 24px -12px rgba(41, 41, 41, 0.04),
+    0 48px 48px -24px rgba(41, 41, 41, 0.04);
+}
+.session-detail .session-actions-menu button {
+  letter-spacing: -0.42px;
+}
+
+@media (max-width: 600px) {
+  .part2-modal.homework-modal .modal-heading h2 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.27px;
+  }
+}
+
+/* Round 4 icon parity with 1:30922/1:33300: 12px gray dots, 16px plus and
+   chevron vectors, flat #2394a1 checks, deep red pending mark, white Back. */
+.demo-session-detail .detail-actions .icon-button .design-icon {
+  width: 14px;
+  height: 14px;
+}
+.demo-session-detail .notes-card > .teal-button {
+  align-items: center;
+}
+.demo-session-detail .notes-card > .teal-button .design-icon,
+.demo-session-detail .previous-note > .design-icon {
+  width: 16px;
+  height: 16px;
+}
+.demo-session-detail .checklist-card span.reviewed {
+  background: #2394a1;
+}
+.demo-session-detail .checklist-card span.not-reviewed {
+  background: #a02727;
+}
+.demo-session-detail .record-footer > .soft-button {
+  background: #fff;
+  border-color: #eaeaeb;
+  color: #101010;
+}
+@media (max-width: 600px) {
+  /* The 16px chevron keeps the former text-glyph budget (5px + 14px gap). */
+  .demo-session-detail .previous-note {
+    gap: 3px;
+  }
+}

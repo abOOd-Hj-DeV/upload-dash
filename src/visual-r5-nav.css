@@ -1,0 +1,6 @@
+/* Round 5 nav-wire: the /homework routes resolve to the shared Workspace shell
+   until the page-content units land; this keeps the shell composition honest. */
+.secondary-main > .homework-route-body {
+  margin: 0 16px 16px;
+  min-height: 320px;
+}

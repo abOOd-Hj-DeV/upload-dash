@@ -1,0 +1,1374 @@
+.mobile-page-title {
+  display: none;
+}
+.remaining-workspace {
+  min-height: max(100svh, 826.6px);
+}
+.remaining-workspace .secondary-topbar {
+  height: 53px;
+  padding: 16px 16px 0;
+}
+.remaining-workspace .secondary-heading h1 {
+  color: #0a0a0a;
+}
+.remaining-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.remaining-icon img {
+  display: block;
+  max-width: none;
+}
+.remaining-primary,
+.remaining-danger,
+.remaining-cancel {
+  border-radius: 12px;
+  padding: 10px 16px;
+  font:
+    600 14px/16px 'IBM Plex Sans Arabic',
+    sans-serif;
+  text-align: center;
+}
+.remaining-primary,
+.remaining-danger {
+  color: white;
+  background: linear-gradient(155deg, #135e66 5.59%, #1d919e 82.06%);
+  box-shadow:
+    inset 0 -4.05px 4.05px #ffffff40,
+    inset 0 4.05px 11.137px #ffffff4d;
+}
+.remaining-danger {
+  background: linear-gradient(167deg, #661314 5.59%, #9e1d1f 82.06%);
+}
+.remaining-cancel {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #364153;
+}
+.profile-layout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  padding: 16px;
+}
+.profile-summary,
+.profile-panel {
+  background: white;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+}
+.profile-summary {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.profile-identity {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.profile-avatar {
+  position: relative;
+  width: 43px;
+  height: 45px;
+  flex-shrink: 0;
+}
+.profile-avatar > img {
+  position: absolute;
+  width: 104.39%;
+  height: 104.4%;
+  top: -2.18%;
+  left: -1.97%;
+  border-radius: 12px;
+}
+.profile-verified {
+  position: absolute;
+  top: -3px;
+  left: 32px;
+  width: 15px;
+  height: 15px;
+}
+.profile-identity h2 {
+  font:
+    600 19px / normal 'IBM Plex Sans',
+    sans-serif;
+  letter-spacing: -0.19px;
+  color: #132523;
+}
+.profile-identity p {
+  padding-top: 2px;
+  color: #3d5552;
+  font:
+    400 13px/20px 'IBM Plex Sans',
+    sans-serif;
+}
+.profile-edit {
+  width: 100%;
+}
+.profile-description {
+  padding: 7px 4px 8px;
+}
+.profile-layout h3 {
+  font:
+    600 16px/1.2 'IBM Plex Sans Arabic',
+    sans-serif;
+  letter-spacing: -0.176px;
+  color: #17181a;
+}
+.profile-description p {
+  color: #99a1af;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+.profile-counts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 4px 4px;
+}
+.profile-counts > div {
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 4px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-counts strong {
+  font:
+    500 34px/36px Georgia,
+    serif;
+  color: #101828;
+}
+.profile-counts span {
+  font:
+    500 14px/20px 'IBM Plex Sans',
+    sans-serif;
+  color: #99a1af;
+}
+.profile-panel {
+  padding: 16px;
+  min-width: 0;
+}
+.profile-tabs {
+  display: inline-flex;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 8px;
+}
+.profile-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #444b52;
+  font:
+    600 13px / normal 'IBM Plex Sans',
+    sans-serif;
+}
+.profile-tabs button.selected {
+  color: white;
+  background: #1d8590;
+  box-shadow:
+    inset 0 -3px 3px #ffffff40,
+    inset 0 3px 10px #ffffff4d;
+}
+.profile-about {
+  padding-top: 16px;
+}
+.profile-about p {
+  color: #99a1af;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+.profile-information-grid,
+.profile-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.profile-information-grid > section,
+.profile-settings-grid > section {
+  padding-top: 16px;
+}
+.profile-info-rows {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+.profile-info-row {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+}
+.profile-info-row small,
+.profile-credentials small {
+  display: block;
+  color: #99a1af;
+  font-size: 12px;
+  line-height: 16px;
+}
+.profile-info-row p,
+.profile-credentials p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #1e2939;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.profile-credentials {
+  padding-top: 16px;
+}
+.profile-credentials > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+}
+.profile-credentials article {
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.credential-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+.profile-settings-grid > section {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+.remaining-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  text-align: left;
+}
+.remaining-setting-row > .remaining-icon:last-child {
+  opacity: 0.5;
+  margin-left: auto;
+  width: 24px;
+}
+.remaining-setting-row > .remaining-icon:first-child {
+  width: 24px;
+  height: 24px;
+}
+.setting-row-copy {
+  min-width: 0;
+  flex: 1;
+}
+.setting-row-copy strong {
+  display: block;
+  color: #1e2939;
+  font:
+    500 12px/16px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.setting-row-copy small {
+  display: block;
+  color: #767c88;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.remaining-badge {
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #1d919e1a;
+  font:
+    500 12px/16px 'IBM Plex Sans Arabic',
+    sans-serif;
+  color: #1d919e;
+  white-space: nowrap;
+}
+.profile-help-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  gap: 22px;
+  padding-top: 38px;
+}
+.help-live > div {
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 12px;
+}
+.help-live p {
+  margin-top: 12px;
+  color: #45516b;
+  font-size: 12px;
+  line-height: 24px;
+}
+.help-live button {
+  width: 100%;
+  margin-top: 12px;
+  color: #000;
+  border: 0;
+  text-transform: capitalize;
+}
+.help-live > small {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #99a1af;
+  font-size: 12px;
+}
+.help-links {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding-bottom: 28px;
+}
+.help-links h3 {
+  margin: 4px 0 8px;
+}
+.help-links .remaining-setting-row {
+  min-height: 59px;
+  gap: 16px;
+}
+.help-links .remaining-badge {
+  color: #1e9e5a;
+  background: #e7f7ef;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.help-links .remaining-setting-row:last-child > .remaining-icon:last-child {
+  display: none;
+}
+.remaining-notice {
+  border: 1px solid #d5e7e9;
+  margin: 0 16px 16px;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #eef8f9;
+  font-size: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.remaining-notice button {
+  margin-left: auto;
+  font-size: 22px;
+}
+.remaining-modal {
+  width: 576px;
+  border: none;
+  border-radius: 24px;
+  padding: 16px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100svh - 32px);
+  overflow-y: auto;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+.remaining-modal::backdrop {
+  background: #0009;
+  backdrop-filter: blur(6px);
+}
+.remaining-modal .modal-heading {
+  margin-bottom: 16px;
+  align-items: center;
+  gap: 12px;
+}
+.remaining-modal .modal-heading h2 {
+  font:
+    600 20px/32px 'IBM Plex Sans Arabic',
+    sans-serif;
+  letter-spacing: -0.3px;
+  color: #2f2f2f;
+}
+.remaining-modal .modal-heading button {
+  border: 1.5px solid #eaeaea;
+  border-radius: 8px;
+  height: 36px;
+  width: 36px;
+  flex-shrink: 0;
+  font-size: 23px;
+  color: #2f2f2f;
+}
+.remaining-field {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  color: #364153;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.remaining-field input,
+.remaining-field textarea {
+  width: 100%;
+  border: 0.8px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 14px;
+  min-width: 0;
+  padding: 10px 16px;
+  font:
+    400 14px/1.3 'IBM Plex Sans Arabic',
+    sans-serif;
+  height: 42px;
+  color: #111;
+}
+.remaining-field textarea {
+  height: 88px;
+  resize: vertical;
+}
+.remaining-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.editable-profile-field {
+  position: relative;
+}
+.editable-profile-field input {
+  padding-right: 44px;
+}
+.editable-profile-field .remaining-icon {
+  position: absolute;
+  right: 16px;
+  top: 11px;
+}
+.remaining-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+.remaining-modal form:focus-within {
+  outline: none;
+}
+.remaining-error {
+  color: #a32828;
+  font-size: 13px;
+  padding: 8px 0;
+}
+.remaining-muted {
+  color: #657381;
+  font-size: 12px;
+  margin-top: 12px;
+}
+.preferences-modal {
+  width: 441px;
+}
+.preferences-list {
+  display: grid;
+  gap: 16px;
+}
+.preferences-list label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+.preferences-list input {
+  appearance: none;
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #d1d5db;
+  position: relative;
+  flex-shrink: 0;
+}
+.preferences-list input:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.preferences-list input:checked {
+  background: #1d919e;
+}
+.preferences-list input:checked:before {
+  left: 18px;
+}
+.hours-modal {
+  width: 441px;
+}
+.hours-list {
+  display: grid;
+  gap: 16px;
+  padding: 8px;
+}
+.hours-list > div {
+  display: grid;
+  grid-template-columns: minmax(112px, 1.1fr) minmax(0, 1fr) auto minmax(0, 1.1fr);
+  gap: 8px;
+  align-items: center;
+}
+.hours-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.hours-list input[type='checkbox'] {
+  accent-color: #4dadb7;
+  width: 16px;
+  height: 16px;
+}
+.hours-list input[type='time'] {
+  width: 100%;
+  min-width: 0;
+  padding: 6px;
+  height: 34px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  font:
+    400 12px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.hours-list span {
+  font-size: 12px;
+  color: #99a1af;
+}
+.hours-list .day-off {
+  color: #99a1af;
+}
+.hours-list .day-off label {
+  font-weight: 400;
+}
+.holidays-modal {
+  width: 415px;
+}
+.holiday-list {
+  display: grid;
+  gap: 8px;
+}
+.holiday-list article {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  border: 1px solid #eff0f0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f9fafb;
+}
+.holiday-list strong {
+  font-size: 14px;
+}
+.holiday-list p {
+  color: #657381;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.faq-list {
+  display: grid;
+  gap: 8px;
+}
+.faq-list details {
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+  padding: 12px 16px;
+}
+.faq-list summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  color: #1e2939;
+  font:
+    500 14px/24px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-open-arrow {
+  display: none;
+  margin-left: auto;
+}
+.faq-closed-arrow {
+  margin-left: auto;
+}
+.faq-list details[open] .faq-open-arrow {
+  display: inline-flex;
+}
+.faq-list details[open] .faq-closed-arrow {
+  display: none;
+}
+.faq-list p {
+  margin-top: 12px;
+  color: #657381;
+  font:
+    400 14px/24px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.contact-modal {
+  width: 512px;
+}
+.wallet-layout {
+  padding: 16px;
+}
+.wallet-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.wallet-total {
+  padding: 8px;
+  border-radius: 24px;
+  color: white;
+  min-width: 0;
+}
+.wallet-total > div {
+  border-radius: 16px;
+  padding: 16px;
+  background: #ffffff1a;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 46px;
+}
+.wallet-total header span {
+  font:
+    500 14px/20px Inter,
+    sans-serif;
+}
+.wallet-total h2 {
+  font:
+    600 24px/32px Inter,
+    sans-serif;
+}
+.wallet-total-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.wallet-total-numbers > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wallet-total-numbers span {
+  font:
+    500 14px/20px Inter,
+    sans-serif;
+}
+.wallet-total-numbers strong {
+  font:
+    600 24px/32px Inter,
+    sans-serif;
+  white-space: nowrap;
+}
+.wallet-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.wallet-stat-grid article {
+  padding: 16px;
+  background: white;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+  min-width: 0;
+}
+.wallet-stat-grid p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font:
+    500 14px/20px Inter,
+    sans-serif;
+  color: #657381;
+  margin-bottom: 16px;
+}
+.wallet-stat-grid strong {
+  font:
+    600 24px/32px Inter,
+    sans-serif;
+  color: #0a0a0a;
+  white-space: nowrap;
+}
+.wallet-panel {
+  background: white;
+  border: 1px solid #eff0f0;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 20px;
+}
+.wallet-tabs {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+  gap: 0;
+}
+.wallet-tabs button:not(.wallet-withdraw-button) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  height: 46px;
+  color: #333;
+  font:
+    600 14px/16px 'IBM Plex Sans Arabic',
+    sans-serif;
+  border-bottom: 2px solid transparent;
+}
+.wallet-tabs button.selected:not(.wallet-withdraw-button) {
+  color: #1d919e;
+  border-bottom-color: #1d919e;
+}
+.wallet-tabs .wallet-withdraw-button {
+  margin-left: auto;
+  align-self: center;
+}
+.wallet-chart {
+  height: 368px;
+}
+.wallet-chart > header {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.wallet-chart header button {
+  color: #182521;
+  font:
+    600 18px/24px 'IBM Plex Sans Arabic',
+    sans-serif;
+  letter-spacing: -0.27px;
+  text-align: left;
+}
+.wallet-growth {
+  background: #1c899b33;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1c899b;
+}
+.wallet-bars {
+  height: 292px;
+  padding: 24px 8px 0;
+}
+.desktop-wallet-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 100%;
+}
+.wallet-bar-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #172825;
+}
+.wallet-bar-column strong {
+  font:
+    600 12px/20px 'IBM Plex Sans Arabic',
+    sans-serif;
+  margin-bottom: 8px;
+}
+.wallet-bar-column small {
+  color: #7c8c89;
+  font:
+    400 11px/20px 'IBM Plex Sans Arabic',
+    sans-serif;
+  margin-top: 8px;
+}
+.wallet-bar {
+  border-radius: 16px 16px 0 0;
+  background: #1c899b;
+}
+.wallet-advisory {
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: #fbf0de;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9b7230;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.wallet-transactions {
+  padding: 16px 0;
+}
+.wallet-transactions article {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 0.8px solid #f9fafb;
+  padding: 12px 0;
+  min-width: 0;
+}
+.wallet-transaction-avatar {
+  width: 40px;
+  height: 42px;
+  border: 2px solid #ebebeb;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.wallet-transaction-copy {
+  flex: 1;
+  min-width: 0;
+}
+.wallet-transaction-copy strong {
+  display: block;
+  font-size: 16px;
+  color: #1e2939;
+}
+.wallet-transaction-copy small {
+  display: block;
+  font-size: 12px;
+  color: #657381;
+}
+.wallet-transaction-status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.wallet-transaction-status strong {
+  font:
+    500 14px/20px Inter,
+    sans-serif;
+}
+.wallet-income {
+  color: #189584;
+}
+.wallet-transaction-status > span {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font:
+    500 12px/20px Inter,
+    sans-serif;
+  border: 1px solid;
+  min-width: 91px;
+  text-align: center;
+}
+.wallet-transaction-status > .completed {
+  color: #189584;
+  background: #effefa;
+  border-color: #ddf3ef;
+}
+.wallet-transaction-status > .processing {
+  color: #b8892c;
+  background: #fff9e9;
+  border-color: #f5e5c4;
+}
+.wallet-withdrawal-icon {
+  width: 40px;
+  height: 42px;
+  border: 2px solid #ebebeb;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+.withdrawal-modal {
+  width: 408px;
+}
+.withdrawal-modal .modal-heading {
+  margin-bottom: 0;
+}
+.withdrawal-balance {
+  color: #767c88;
+  font-size: 14px;
+  margin: -2px 0 12px;
+}
+.withdrawal-form {
+  display: grid;
+  gap: 12px;
+}
+.withdrawal-form input,
+.withdrawal-method {
+  background: #f6f6f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  min-width: 0;
+}
+.withdrawal-form input {
+  padding: 8px 10px;
+  font:
+    400 14px/20px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.withdrawal-method {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 10px;
+}
+.withdrawal-method select {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 8px 10px 8px 0;
+  font:
+    400 14px/20px 'IBM Plex Sans Arabic',
+    sans-serif;
+}
+.withdrawal-inputs {
+  display: grid;
+  gap: 12px;
+}
+.payment-logo {
+  position: relative;
+  flex-shrink: 0;
+}
+.payment-logo.shamcash {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.payment-logo.shamcash img {
+  position: absolute;
+  width: 125.16%;
+  height: 122.78%;
+  left: -14.92%;
+  top: -10.32%;
+}
+.payment-logo.haram {
+  width: 60px;
+  height: 22px;
+}
+.payment-logo.haram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.withdrawal-form > .remaining-primary {
+  width: 100%;
+  border-radius: 10px;
+  background: #1d919e;
+}
+.wallet-phone-heading,
+.wallet-phone-total,
+.phone-metric-label,
+.phone-metric-value,
+.phone-wallet-bars,
+.phone-growth,
+.phone-wallet-advisory,
+.wallet-mobile-list-heading {
+  display: none;
+}
+@media (max-width: 1100px) and (min-width: 601px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+  .profile-summary {
+    width: 290px;
+  }
+  .remaining-workspace {
+    min-height: max(100svh, 1119.6px);
+  }
+  .wallet-metrics {
+    grid-template-columns: 1fr;
+  }
+  .wallet-total {
+    min-height: 206px;
+  }
+  .wallet-total > div {
+    gap: 20px;
+  }
+  .wallet-bars {
+    height: 270px;
+  }
+}
+@media (max-width: 600px) {
+  .remaining-workspace {
+    min-height: 100svh;
+  }
+  .remaining-workspace .secondary-topbar {
+    height: 53px;
+    padding: 16px 16px 0;
+  }
+  .remaining-workspace .secondary-heading h1 {
+    font:
+      600 18px/28px Inter,
+      sans-serif;
+    letter-spacing: -0.36px;
+  }
+  .mobile-page-title {
+    display: block;
+  }
+  .desktop-page-title {
+    display: none;
+  }
+  .profile-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+  .profile-summary {
+    padding: 12px;
+    gap: 16px;
+  }
+  .profile-description {
+    padding: 4px 4px 8px;
+  }
+  .profile-description p {
+    margin-top: 8px;
+  }
+  .profile-counts {
+    margin-top: 0;
+  }
+  .profile-counts > div {
+    padding: 8px 12px;
+    height: 67px;
+    gap: 4px;
+  }
+  .profile-counts strong {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .profile-counts span {
+    line-height: 16px;
+  }
+  .profile-panel {
+    padding: 16px;
+  }
+  .profile-tabs {
+    display: flex;
+    gap: 6px;
+  }
+  .profile-tabs button {
+    flex: 1;
+    padding: 6px 8px;
+  }
+  .profile-settings-grid,
+  .profile-information-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .profile-settings-grid > section {
+    gap: 16px;
+    padding-top: 20px;
+  }
+  .profile-settings-grid .profile-account {
+    grid-row: 1;
+  }
+  .profile-settings-grid .profile-availability {
+    padding-top: 16px;
+  }
+  .profile-settings-grid h3 {
+    height: 17px;
+  }
+  .profile-settings-grid {
+    gap: 16px;
+  }
+  .setting-row-copy strong {
+    font-size: 12px;
+  }
+  .profile-settings-grid .remaining-setting-row {
+    min-height: 42px;
+  }
+  .profile-settings-grid .remaining-danger {
+    min-height: 42px;
+    margin-top: 0;
+  }
+  .profile-information-grid .profile-info-row {
+    min-height: 52px;
+  }
+  .profile-credentials > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .profile-credentials article {
+    min-height: 104px;
+  }
+  .profile-help-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 32px;
+    gap: 28px;
+  }
+  .help-links {
+    padding-bottom: 0;
+  }
+  .remaining-modal {
+    width: 340px;
+    max-width: calc(100vw - 32px);
+  }
+  .remaining-field-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .hours-list {
+    padding: 0;
+  }
+  .hours-list > div {
+    grid-template-columns: 96px minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 4px;
+  }
+  .hours-list label {
+    gap: 4px;
+    font-size: 12px;
+  }
+  .hours-list input[type='time'] {
+    padding: 3px;
+    font-size: 10px;
+  }
+  .wallet-layout {
+    padding: 16px;
+  }
+  .wallet-phone-heading {
+    display: block;
+    font:
+      400 12px/16px Inter,
+      sans-serif;
+    margin-bottom: 16px;
+  }
+  .wallet-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .wallet-total {
+    display: none;
+  }
+  .wallet-phone-total {
+    display: grid;
+    gap: 12px;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 16px;
+    font:
+      400 12px/16px Inter,
+      sans-serif;
+  }
+  .wallet-phone-total > button,
+  .wallet-phone-total > p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+  }
+  .wallet-phone-total > button:first-child {
+    margin-bottom: 4px;
+  }
+  .wallet-phone-total span:first-child {
+    color: #657381;
+  }
+  .wallet-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 8px;
+  }
+  .wallet-stat-grid article {
+    padding: 14px;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+  }
+  .wallet-stat-grid p {
+    font-size: 12px;
+    line-height: 16px;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .wallet-stat-grid strong {
+    font:
+      600 20px/28px Inter,
+      sans-serif;
+  }
+  .desktop-metric-label,
+  .desktop-metric-value,
+  .desktop-growth {
+    display: none;
+  }
+  .phone-metric-label,
+  .phone-metric-value,
+  .phone-growth {
+    display: inline;
+  }
+  .wallet-panel {
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 12px;
+  }
+  .wallet-overview .wallet-panel {
+    position: relative;
+    margin-bottom: 96px;
+  }
+  .wallet-overview .wallet-tabs {
+    display: none;
+  }
+  .wallet-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wallet-tabs button:not(.wallet-withdraw-button) {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .wallet-tabs .wallet-withdraw-button {
+    display: none;
+  }
+  .wallet-chart {
+    height: 172px;
+  }
+  .wallet-chart > header {
+    padding-top: 0;
+  }
+  .wallet-chart header button {
+    font:
+      400 12px/16px Inter,
+      sans-serif;
+  }
+  .wallet-growth {
+    background: none;
+    padding: 0;
+    font:
+      600 10px/16px Inter,
+      sans-serif;
+    color: #0091a5;
+  }
+  .desktop-wallet-bars {
+    display: none;
+  }
+  .wallet-bars {
+    height: 156px;
+    padding: 16px 0 0;
+  }
+  .phone-wallet-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    height: 100%;
+  }
+  .wallet-bar-column strong {
+    font:
+      600 10px/12px Inter,
+      sans-serif;
+    margin-bottom: 6px;
+  }
+  .wallet-bar-column small {
+    font:
+      400 10px/12px Inter,
+      sans-serif;
+    margin-top: 6px;
+    color: #657381;
+  }
+  .wallet-bar {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    max-width: 28px;
+    align-self: center;
+  }
+  .wallet-overview .wallet-advisory {
+    position: absolute;
+    width: calc(100% + 2px);
+    left: -1px;
+    top: calc(100% + 16px);
+  }
+  .wallet-advisory {
+    padding: 12px;
+    border: 1px solid #ead1a8;
+    border-radius: 8px;
+    align-items: flex-start;
+    gap: 8px;
+    font:
+      400 12px/1.4 Inter,
+      sans-serif;
+  }
+  .desktop-wallet-advisory {
+    display: none;
+  }
+  .phone-wallet-advisory {
+    display: block;
+  }
+  .wallet-advisory .remaining-icon {
+    margin-top: 1px;
+  }
+  .wallet-mobile-list-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .wallet-mobile-list-heading h2 {
+    font-size: 14px;
+  }
+  .wallet-mobile-list-heading > button {
+    font-size: 12px;
+  }
+  .wallet-transactions article {
+    gap: 8px;
+  }
+  .wallet-transaction-copy strong {
+    font-size: 12px;
+  }
+  .wallet-transaction-copy small {
+    font-size: 10px;
+  }
+  .wallet-transaction-status {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+  }
+  .wallet-transaction-status strong {
+    font-size: 12px;
+  }
+  .wallet-transaction-status > span {
+    font-size: 10px;
+    line-height: 16px;
+    min-width: 74px;
+  }
+}
+@media (max-width: 359px) {
+  .profile-tabs {
+    gap: 0;
+  }
+  .profile-tabs button {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .profile-identity h2 {
+    font-size: 17px;
+  }
+  .profile-help-grid .remaining-badge {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+  .phone-wallet-bars {
+    gap: 20px;
+  }
+  .remaining-modal .modal-heading h2 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .hours-list > div {
+    grid-template-columns: 86px minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+}
